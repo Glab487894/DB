@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/crud', require('./crud'));
+router.use('/fs', require('./file_sistem'));
 
 module.exports = router;

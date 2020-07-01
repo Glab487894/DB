@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const  crudController = require('../controllers/crud');
+const  crudController = require('../controllers/df');
 
 router.post('/df', crudController.df);
 
