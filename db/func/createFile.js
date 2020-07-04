@@ -3,7 +3,7 @@ const path = require('path');
 
 let createFile = function (dirPath, name) {
     try {
-        fs.open(path.join(__dirname, '../file_sistem', dirPath, name), 'w');
+        fs.openSync(path.join(__dirname, '../file_sistem', dirPath, name), 'w');
         return ("fie has been created");
     }
     catch (err){
