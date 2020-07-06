@@ -1,17 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 
-let rmdir = function (dirPath, name) {
+let removeDir = function (dirPath, name) {
     try {
         fs.rmdirSync(path.join(__dirname, '../file_sistem', dirPath, name));
-        return ("directory has been deleted");
+        return ("directory has been removed");
     }
     catch (err){
         return({
-            message: "Can not delete directory",
+            message: "Can not remove directory",
             err: err
         });
     }
 }
 
-module.exports = rmdir;
+module.exports = removeDir;

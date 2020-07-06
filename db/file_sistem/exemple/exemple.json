@@ -1,0 +1,5 @@
+{
+    "method": "removeFile",
+    "path": "exemple",
+    "name": "exemple.json"
+}

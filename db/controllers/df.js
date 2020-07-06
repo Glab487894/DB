@@ -1,12 +1,13 @@
 const fs = require('fs');
 
 //functions
-const mkdir = require('../func/mkdir');
-const rmdir = require('../func/rmdir');
+const createDir = require('../func/createDir');
+const removeDir = require('../func/removeDir');
 const createFile = require('../func/createFile');
 const removeFile = require('../func/removeFile');
 const readFile = require('../func/readFile');
 const writeFile = require('../func/writeFile');
+const readJson = require('../func/readJson');
 
 module.exports = {
     async df(req, res){
@@ -20,12 +21,12 @@ module.exports = {
                data = req.body.data;
             }
 
-            if(method == 'mkdir'){
-                let answer = mkdir(path, name);
+            if(method == 'createDir'){
+                let answer = createDir(path, name);
                 res.status(200).send(answer);
             }
-            else if (method == 'rmdir'){
-                let answer = rmdir(path, name);
+            else if (method == 'removeDir'){
+                let answer = removeDir(path, name);
                 res.status(200).send(answer);
             }
             else if (method == 'createFile') {
@@ -42,6 +43,10 @@ module.exports = {
             }
             else if (method == 'writeFile'){
                 let answer = writeFile(path, name, data);
+                res.status(200).send(answer);
+            }
+            else if (method == 'readJson'){
+                let answer = readJson(path, name);
                 res.status(200).send(answer);
             }
 

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-let mkdir = function (dirPath, name) {
+let createDir = function (dirPath, name) {
     try {
         fs.mkdirSync(path.join(__dirname, '../file_sistem', dirPath, name));
         return ("directory has been created");
@@ -14,4 +14,4 @@ let mkdir = function (dirPath, name) {
     }
 }
 
-module.exports = mkdir;
+module.exports = createDir;
