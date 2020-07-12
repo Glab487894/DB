@@ -1,5 +1,1 @@
-{
-    "method": "removeFile",
-    "path": "exemple",
-    "name": "exemple.json"
-}
+{"method":"createFile","path":"exemple","name":"exemple.json"}

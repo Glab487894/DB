@@ -1,13 +1,13 @@
 const fs = require('fs');
 
 //functions
-const createDir = require('../func/createDir');
-const removeDir = require('../func/removeDir');
-const createFile = require('../func/createFile');
-const removeFile = require('../func/removeFile');
-const readFile = require('../func/readFile');
-const writeFile = require('../func/writeFile');
-const readJson = require('../func/readJson');
+const createDir = require('../functions/createDir');
+const removeDir = require('../functions/removeDir');
+const createFile = require('../functions/createFile');
+const removeFile = require('../functions/removeFile');
+const readFile = require('../functions/readFile');
+const writeFile = require('../functions/writeFile');
+const readJson = require('../functions/readJson');
 
 module.exports = {
     async df(req, res){
@@ -46,6 +46,7 @@ module.exports = {
                 res.status(200).send(answer);
             }
             else if (method == 'readJson'){
+                console.log(method, path, name);
                 let answer = readJson(path, name);
                 res.status(200).send(answer);
             }
