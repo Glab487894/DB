@@ -25,31 +25,28 @@ To send requests use url: localhost:7202/api/fs/df
        name: "exemple.txt"
     }
 
-##### Methods
+##### Methods dirFile
 1. readFile - read file and return its contents.
 2. createFile - create file and return message or error.
 3. removeFile - remove file and return message or error.
-4. readJson - read and parse json file and return its contents.
-5. createDir - create folder and return message or error.
-6. removeDir - remove folder and return message or error.
-7. writeFile - write data to file and return message or error. 
+4. createDir - create folder and return message or error.
+5. removeDir - remove folder and return message or error.
+6. writeFile - write data to file and return message or error. 
+
+###### Methods json
+1. readJson - read and parse json file and return its contents.
+2. writeJson - write json file and return message.
+3. getElement - return element from array in json file.
+4. push - push element to the end of array in json file. 
+
 
 To write file, first you have to create a variable or object - data
 
-let data = 'some text'
-
-##### or
-    let data = {
-    	name: "jack",
-    	age: "16",
-    }
-
-##### Then send:
     {
         "method": "writeFile",
         "path": "exemple",
         "name": "exemple.json",
-        "data": data
+        "data": "SOME TEXT"
     }
 
 if you got message like 'Can not read file' and error, look for errors of the fs.
