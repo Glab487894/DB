@@ -6,7 +6,7 @@ let deleteElement = function (dirPath, name, data) {
         let file = fs.readFileSync(path.join(__dirname, '../file_sistem', dirPath, name), 'utf8');
         let parsedFile = JSON.parse(file);
         let newArr = delete parsedFile[data];
-        let writeData = JSON.stringify(parsedFile);
+        let writeData = JSON.stringify(parsedFile, null, 4);
         fs.writeFileSync(path.join(__dirname, '../file_sistem', dirPath, name), writeData);
         return('element has been deleted');
     }

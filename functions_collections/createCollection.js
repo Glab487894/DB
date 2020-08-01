@@ -4,7 +4,7 @@ const addStructure = require('../function_json/writeJson');
 
 let createCollection = function (name, dirPath, fileName) {
     try {
-        let fsRwListAnswer = fsRw(name, dirPath, fileName);
+        let fsRwListAnswer = fsRw(name, dirPath, fileName); //add collection to the list
         let createFileAnswer = createFile(dirPath, fileName);
         let addStructureAnswer = addStructure(dirPath, fileName, []);
 

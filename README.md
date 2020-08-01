@@ -25,7 +25,7 @@ If you don't want to use our npm module - looking for next part of the text.
 
 ### usage
 #### Methods dirFile
-1. readFile - read file and return its contents.
+1. readFile - getElement file and return its contents.
 2. createFile - create file and return message or error.
 3. removeFile - remove file and return message or error.
 4. createDir - create folder and return message or error.
@@ -33,7 +33,7 @@ If you don't want to use our npm module - looking for next part of the text.
 6. writeFile - write data to file and return message or error. 
 
 #### Methods json
-1. readJson - read and parse json file and return its contents.
+1. readJson - getElement and parse json file and return its contents.
 2. writeJson - write json file and return message.
 3. getElement - return element from array in json file.
 4. push - push element to the end of array in json file. 
@@ -102,7 +102,7 @@ To send request with json methods, you have to send:
         }
         
 All methods can return you errors.
-if you got message like 'Can not read file' and error, look for errors of the fs.
+if you got message like 'Can not getElement file' and error, look for errors of the fs.
 
 ### exemple of err:
 

@@ -3,7 +3,7 @@ const path = require('path');
 
 let writeJson = function (dirPath, name, data) {
     try {
-        let writeData = JSON.stringify(data);
+        let writeData = JSON.stringify(data, null, 4);
         fs.writeFileSync(path.join(__dirname, '../file_sistem', dirPath, name), writeData);
         return ("file has been wrote");
     }
